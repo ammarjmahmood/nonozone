@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>No No Zone</title>
+<style>
+  html {
+    font-size: 30px;
+  }
+  body {
+    margin: 0 auto;
+    padding: 50px;
+    font-family: Calibri, Helvetica, Arial, sans-serif;
+    line-height: 150%;
+    background-image: url("https://i.redd.it/a7ekju3ipnl61.png");
+  }
+  body:not(.ready) #textarea::placeholder,
+  body:not(.ready) #controls {
+    opacity: 0;
+  }
+  body:not(.ready) #controls {
+    visibility: hidden;
+  }
+  #textarea {
+    border: 3px solid;
+    outline: none;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  #textarea::placeholder {
+    color: silver;
+    opacity: 1;
+    transition: opacity .7s;
+  }
+  #controls {
+    transition: opacity 1s;
+    margin-left: 85px;
+    font-size: 25px
+  }
+  #save {
+    font-size: 150%;
+    font-weight: bold;
+    margin-right: 15px;
+  }
+  #mainblurb {
+    text-align: center;
+    border: 4px solid green;
+  }
+  #leftbox {
+    float:left; 
+    width:25%;
+    height:280px;
+  }
+  #middlebox{
+    float:left; 
+    width:50%;
+    height:280px;
+  }
+  #rightbox{
+    float:right;
+    width:25%;
+    height:280px;
+  }
+  .switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+
+<div id="mainblurb">
+  <h1>No No Zone</h1>
+<p>
+  <strong>No No Zone</strong> is a simple way to block access to time-consuming websites ( also known as NO NO ZONES ) 
+  as you specify in the window below, or using one of the togles for the website<br><br>
+  Type the sites you would like to block the access to in a format like <strong>facebook.com</strong>, type them in new line each.
+  Sites will be blocked on their next attempted visit if enabled.
+  <strong>TO OPEN THIS TAB UP AGAIN RIGHT CLICK ON THE EXTENTION AND SELECT OPTIONS</strong>. Please note that by default this extention is enabled!!
+</p>
+</div>
+<br>
+<br>
+<br>
+
+<div id = "boxes">
+
+  <div id = "leftbox">
+    <textarea id="textarea" rows="10" cols="30" spellcheck="false"></textarea>
+    <div id="controls">
+      <button id="save">Save</button>
+      <b>Enabled?</b>
+      <label class="switch">
+      <input id="checkbox" type="checkbox" checked="checked">
+      <span class="slider round"></span>
+      </label>
+    </div>
+  </div> 
+    
+  <div id = "middlebox">
+      <h2>Social Media:</h2>
+      <label class="switch">
+        <input type="checkbox" name="insta" id ="checkboxadd" value="instagram.com ">
+        <span class="slider round"></span>
+      </label>
+      <b>Instagram</b>
+      <br>
+
+      <label class="switch">
+        <input type="checkbox" name="twit" id ="checkboxadd" value="twitter.com ">
+        <span class="slider round"></span>
+      </label>
+      <b>Twitter</b>
+      <br>
+
+      <label class="switch">
+        <input type="checkbox" name="tik" id ="checkboxadd" value="tiktok.com ">
+        <span class="slider round"></span>
+      </label>
+      <b>TikTok</b>
+      <br>
+
+      <label class="switch">
+        <input type="checkbox" name="face" id ="checkboxadd" value="facebook.com ">
+        <span class="slider round"></span>
+      </label>
+      <b>Facebook</b>
+      <br>
+      
+
+      <label class="switch">
+        <input type="checkbox" name="redd" id ="checkboxadd" value="reddit.com ">
+        <span class="slider round"></span>
+      </label>
+      <b>Reddit</b>
+      <br>
+
+  </div>
+
+  <div id = "rightbox">
+      <h2>Entertainment:</h2>
+
+      <label class="switch">
+        <input type="checkbox" name="tube" id ="checkboxadd" value="youtube.com ">
+        <span class="slider round"></span>
+      </label>
+      <b>Youtube</b>
+      <br>
+
+      <label class="switch">
+        <input type="checkbox" name="twitch" id ="checkboxadd" value="twitch.com ">
+        <span class="slider round"></span>
+      </label>
+      <b>Twitch</b>
+      <br>
+
+      <label class="switch">
+        <input type="checkbox" name="flix" id ="checkboxadd" value="netflix.com ">
+        <span class="slider round"></span>
+      </label>
+      <b>Netflix</b>
+      <br>
+      
+      <label class="switch">
+        <input type="checkbox" name="disney" id ="checkboxadd" value="disneyplus.com ">
+        <span class="slider round"></span>
+      </label>
+      <b>Disney Plus</b>
+
+      <br>
+      <label class="switch">
+        <input type="checkbox" name="primevid" id ="checkboxadd" value="primevideo.com ">>
+        <span class="slider round"></span>
+      </label>
+      <b>Prime Video</b>
+      <br>
+
+     
+  </div>
+</div>
+
+<!--Credits to: https://img.favpng.com/7/2/16/free-content-no-symbol-computer-icons-clip-art-png-favpng-TzvWnAgUqNWDNCVHMUzqf6h77.jpg for the image of the logo-->
+
+<script src="options.js"></script>
+</body>
+</html>

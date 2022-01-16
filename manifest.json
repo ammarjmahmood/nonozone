@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "No No Zone",
+  "description": "Blocks access to websites (as you specify) that may distract you to improve your productivity.",
+  "version": "0.1.0",
+  "icons": { "128": "nono.png" },
+  "options_page": "main.html",
+  "permissions": ["tabs", "storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}
