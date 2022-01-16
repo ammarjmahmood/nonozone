@@ -5,7 +5,7 @@
 const textarea = document.getElementById("textarea");
 const save = document.getElementById("save");
 const checkbox = document.getElementById("checkbox");
-const checkboxadd = document.getElementById("checkboxadd")
+const checkboxadd = document.getElementById("checkboxadd");
 
 textarea.placeholder = [
   "facebook.com",
