@@ -18,21 +18,6 @@ function save_options() {
   });
 }
 
-// Restores select box and checkbox state using the preferences
-// stored in chrome.storage.
-function restore_options() {
-  // Use default value color = 'red' and likesColor = true.
-  chrome.storage.sync.get({
-    blockthese: 'insta'
-    
-  }, function(items) {
-    document.getElementById('checkboxadd').value = items.blockthese;
-   
-  });
-}
-document.addEventListener('DOMContentLoaded', restore_options);
-
-
 chrome.runtime.onInstalled.addListener(function () {
   chrome.storage.local.get(["blocked", "enabled", "blockedd"], function (local) {
     if (!Array.isArray(local.blocked)) {
