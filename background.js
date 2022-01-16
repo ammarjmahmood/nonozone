@@ -23,7 +23,7 @@ function save_options() {
 function restore_options() {
   // Use default value color = 'red' and likesColor = true.
   chrome.storage.sync.get({
-    blockthese: checkboxadded
+    blockthese: 'insta'
     
   }, function(items) {
     document.getElementById('checkboxadd').value = items.blockthese;
@@ -31,7 +31,6 @@ function restore_options() {
   });
 }
 document.addEventListener('DOMContentLoaded', restore_options);
-document.getElementById('save').addEventListener('click', save_options);
 
 
 chrome.runtime.onInstalled.addListener(function () {
